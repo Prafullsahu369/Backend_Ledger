@@ -5,6 +5,11 @@ const accountRoute = require("./routes/account.route");
 const transactionRoute = require("./routes/transaction.routes");
 const app = express();
 
+app.get('/',(req,res)=>{
+    res.send("Welcome to Bankend Ledger API")
+}   
+)
+
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth", authRoute);
